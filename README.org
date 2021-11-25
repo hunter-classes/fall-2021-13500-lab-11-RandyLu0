@@ -1,12 +1,12 @@
 * Fall 2021 - Lab 11
 
-* Last name:
+* Last name: Lu
 
-* First name:
+* First name: Randy
 
-* GitHub username:
+* GitHub username: RandyLu0
 
-* Notes:
+* Notes: Did Task D
 
 
   
