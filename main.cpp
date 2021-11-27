@@ -4,7 +4,9 @@
 
 using std::cout;
 using std::to_string;
+
 int main(){
+
     Profile p1("marco", "Marco");
     cout << p1.getUsername() << "\n"; // marco
     cout << p1.getFullName() << "\n"; // Marco (@marco)
@@ -17,8 +19,6 @@ int main(){
     cout << p2.getUsername() << "\n"; // tarma1
     cout << p2.getFullName() << "\n"; // Tarma Roving (@tarma1)
 
-
-    /*
     Network nw;
     // add three users
     nw.addUser("mario", "Mario");
@@ -48,8 +48,7 @@ int main(){
 
     nw.printDot();
 
-     */
-
+    /*
     Network nw;
     // add three users
     nw.addUser("mario", "Mario");
@@ -81,5 +80,7 @@ int main(){
     cout << "======= Yoshi's timeline =======" << "\n";
     nw.printTimeline("yoshi");
     cout << "\n";
+    */
+
     return 0;
 }

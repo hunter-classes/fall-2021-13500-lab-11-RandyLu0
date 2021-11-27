@@ -15,7 +15,6 @@ public:
     void setDisplayName(string dspn);
     Profile(string usrn, string dspn);
     Profile();
-
 };
 
 

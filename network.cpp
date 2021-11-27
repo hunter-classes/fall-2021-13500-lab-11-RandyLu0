@@ -11,7 +11,7 @@ int Network::findID (string usrn){
 
 Network::Network(){
     numUsers = 0;
-    numPosts = 0;
+    //numPosts = 0;
     for (int i = 0; i < MAX_USERS; ++i)
         for (int j = 0; j < MAX_USERS; ++j)
             following[i][j] = false;
@@ -30,12 +30,13 @@ bool Network::addUser(string usrn, string dspn){
 }
 
 bool Network::follow(string usrn1, string usrn2){
-    if(findID(usrn1) >= 0 and findID(usrn2) >= 0){
+    if(findID(usrn1) >= 0 and findID(usrn2) >= 0 and !following[findID(usrn1)][findID(usrn2)]){
         following[findID(usrn1)][findID(usrn2)] = true;
         return true;
     }
     return false;
 }
+
 void Network::printDot(){
     cout << "digraph {\n";
     for (int i = 0; i < numUsers; i++)
@@ -48,6 +49,7 @@ void Network::printDot(){
     cout << "}\n";
 }
 
+/*
 bool Network::writePost(string usrn, string msg){
     if(findID(usrn) >= 0  and numPosts < MAX_POSTS){
         Post p;
@@ -62,6 +64,8 @@ bool Network::writePost(string usrn, string msg){
 bool Network::printTimeline(string usrn){
     bool printed = false;
     int p = findID(usrn);
+    if(p < 0)
+        return printed;
     string name = profiles[p].getFullName() + ": ";
     for (int i = numPosts; i >= 0; i--) {
         if(posts[i].username == usrn){
@@ -75,3 +79,5 @@ bool Network::printTimeline(string usrn){
     }
     return printed;
 }
+
+ */
